@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'interface_calculadora.dart';
 
 class Calculadora implements InterfaceCalculadora{
@@ -40,8 +42,12 @@ class Calculadora implements InterfaceCalculadora{
          divisaoValor  = divisao(valor1: valor1, valor2: valor2);
          break; 
          case 5: 
-         break; 
+         print('Encerrando o programa');
+         exit(0);
          default:
+         print('Valor fora da faixa !!!');
+         print('Encerrando o programa !!!');
+         exit(0);
       }
   }
   // ================== Interfaces
