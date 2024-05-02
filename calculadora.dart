@@ -31,6 +31,7 @@ class Calculadora implements InterfaceCalculadora{
     somaValor = soma(valor1: valor1, valor2: valor2);
          break; 
          case 2: 
+    subtracaoValor = subtracao(valor1: valor1, valor2: valor2);
          break; 
          case 3: 
          break; 
@@ -45,12 +46,17 @@ class Calculadora implements InterfaceCalculadora{
 
   @override
   double? somaValor;
+  double? subtracaoValor;
+  
 
   @override
   double soma({required double valor1,required double valor2}){
        return valor1 + valor2;
   }
-
+  @override
+  double subtracao({required double valor1,required double valor2}){
+    return valor1 - valor2;
+  }
   @override 
   String toString() => 'Opção $op, valor 1:$valor1, valor 2: $valor2';
 }

@@ -3,7 +3,9 @@ import 'dart:io';
 import 'calculadora.dart';
 void main(List<String> args){
  var calculadora = menu();
- print(calculadora.somaValor);
+ print((calculadora.somaValor  != null) ? calculadora.somaValor : '--------');
+ print((calculadora.subtracaoValor != null) ? calculadora.subtracaoValor : '--------' );
+ 
 }
 
 Calculadora menu(){
