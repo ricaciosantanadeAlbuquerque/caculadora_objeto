@@ -17,7 +17,7 @@ Calculadora menu(){
   print('Digite [4] para dividir');
   print('Digite [5] para sair !!');
   String? opEntrada = stdin.readLineSync();
-  
+
     if (double.parse(opEntrada!) == 5) exit(0);
 
   print('Digite o primeiro valor');
@@ -25,6 +25,7 @@ Calculadora menu(){
   print('Digite o segundo valor');
   String? entradaValor2 = stdin.readLineSync();
     
+  // ignore: unnecessary_null_comparison
   if(opEntrada != null && entradaValor1 != null && entradaValor2 != null){
     if(opEntrada.isNotEmpty && entradaValor1.isNotEmpty && entradaValor2.isNotEmpty){
 
