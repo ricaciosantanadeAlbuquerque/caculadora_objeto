@@ -24,7 +24,17 @@ class Calculadora{
   void escolha({required int op,required double valor1,required double valor2}){
       
       switch(op){
-        case 1: break; case 2: break; case 3: break; case 4: break; case 5: break; default:
+        case 1:
+         break; 
+         case 2: 
+         break; 
+         case 3: 
+         break; 
+         case 4: 
+         break; 
+         case 5: 
+         break; 
+         default:
       }
   }
 
