@@ -28,12 +28,13 @@ class Calculadora implements InterfaceCalculadora{
       
       switch(op){
         case 1:
-    somaValor = soma(valor1: valor1, valor2: valor2);
+         somaValor = soma(valor1: valor1, valor2: valor2);
          break; 
          case 2: 
-    subtracaoValor = subtracao(valor1: valor1, valor2: valor2);
+         subtracaoValor = subtracao(valor1: valor1, valor2: valor2);
          break; 
          case 3: 
+         multiplicacaoValor = multiplicacao(valor1: valor1, valor2: valor2);
          break; 
          case 4: 
          break; 
