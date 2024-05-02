@@ -30,6 +30,8 @@ Calculadora menu(){
        double valor1 = double.tryParse(entradaValor1) ?? 0.0;
        double valor2 =  double.tryParse(entradaValor2) ?? 0.0;
 
+       if(op == 5) exit(0);
+       
       var calculadora =  Calculadora(op: op, valor1: valor1, valor2: valor2); // linha de instanciamento
       return calculadora;
       }catch(e){
