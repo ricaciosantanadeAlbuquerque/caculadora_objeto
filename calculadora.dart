@@ -1,4 +1,6 @@
-class Calculadora{
+import 'interface_calculadora.dart';
+
+class Calculadora implements InterfaceCalculadora{
   int? _op;
   double? _valor1;
   double? _valor2;
@@ -7,6 +9,7 @@ class Calculadora{
       this.op = (op != null) ? op : 0;
       this.valor1 = (valor1 != null) ?  valor1 : 0.0;
       this.valor2 = (valor2 != null) ? valor2 : 0.0;
+      escolha(op: this.op!, valor1: this.valor1!, valor2: this.valor2!);
     }
 
   int? get op => this._op;
@@ -25,6 +28,7 @@ class Calculadora{
       
       switch(op){
         case 1:
+    somaValor = soma(valor1: valor1, valor2: valor2);
          break; 
          case 2: 
          break; 
@@ -36,6 +40,15 @@ class Calculadora{
          break; 
          default:
       }
+  }
+  // ================== Interfaces
+
+  @override
+  double? somaValor;
+
+  @override
+  double soma({required double valor1,required double valor2}){
+       return valor1 + valor2;
   }
 
   @override 
