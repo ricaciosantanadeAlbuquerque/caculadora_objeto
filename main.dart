@@ -1,6 +1,6 @@
 import 'dart:io';
 void main(List<String> args){
-  
+  menu();
 }
 
 void menu(){
@@ -22,6 +22,7 @@ void menu(){
        int op = int.parse(opEntrada);
        double valor1 = double.tryParse(entradaValor1) ?? 0.0;
        double valor2 =  double.tryParse(entradaValor2) ?? 0.0;
+       print('$op $valor1 $valor2');
       }catch(e){
         throw Exception('ERRO! $opEntrada e $entradaValor1 e $entradaValor2 não são valores numéricos');
         }
