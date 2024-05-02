@@ -21,6 +21,23 @@ class Calculadora{
 
   void set valor2(double? valor2) => this._valor2 = valor2;
 
+  void escolha({required int op,required double valor1,required double valor2}){
+      
+      switch(op){
+        case 1:
+         break; 
+         case 2: 
+         break; 
+         case 3: 
+         break; 
+         case 4: 
+         break; 
+         case 5: 
+         break; 
+         default:
+      }
+  }
+
   @override 
   String toString() => 'Opção $op, valor 1:$valor1, valor 2: $valor2';
 }
