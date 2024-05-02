@@ -5,6 +5,7 @@ void main(List<String> args){
  var calculadora = menu();
  print((calculadora.somaValor  != null) ? calculadora.somaValor : '--------');
  print((calculadora.subtracaoValor != null) ? calculadora.subtracaoValor : '--------' );
+ print((calculadora.multiplicacaoValor != null) ? calculadora.multiplicacaoValor : '------');
  
 }
 
