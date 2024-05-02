@@ -14,4 +14,24 @@ void menu(){
   String? entradaValor1 = stdin.readLineSync();
   print('Digite o segundo valor');
   String? entradaValor2 = stdin.readLineSync();
+
+  if(opEntrada != null && entradaValor1 != null && entradaValor2 != null){
+    if(opEntrada.isNotEmpty && entradaValor1.isNotEmpty && entradaValor2.isNotEmpty){
+
+      try{
+       int op = int.parse(opEntrada);
+       double valor1 = double.tryParse(entradaValor1) ?? 0.0;
+       double valor2 =  double.tryParse(entradaValor2) ?? 0.0;
+      }catch(e){
+        throw Exception('ERRO! $opEntrada e $entradaValor1 e $entradaValor2 não são valores numéricos');
+        }
+       
+    }else{
+      print('ERRO! valores vazios');
+      exit(0);
+    }
+  }else{
+    print('ERRO!!! valores nulos');
+    exit(0);
+  }
 }
