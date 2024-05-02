@@ -6,6 +6,7 @@ void main(List<String> args){
  print((calculadora.somaValor  != null) ? calculadora.somaValor : '--------');
  print((calculadora.subtracaoValor != null) ? calculadora.subtracaoValor : '--------' );
  print((calculadora.multiplicacaoValor != null) ? calculadora.multiplicacaoValor : '------');
+ print((calculadora.divisaoValor != null) ? calculadora.divisaoValor : '--------');
  
 }
 
@@ -16,11 +17,15 @@ Calculadora menu(){
   print('Digite [4] para dividir');
   print('Digite [5] para sair !!');
   String? opEntrada = stdin.readLineSync();
+
+    if (double.parse(opEntrada!) == 5) exit(0);
+
   print('Digite o primeiro valor');
   String? entradaValor1 = stdin.readLineSync();
   print('Digite o segundo valor');
   String? entradaValor2 = stdin.readLineSync();
-
+    
+  // ignore: unnecessary_null_comparison
   if(opEntrada != null && entradaValor1 != null && entradaValor2 != null){
     if(opEntrada.isNotEmpty && entradaValor1.isNotEmpty && entradaValor2.isNotEmpty){
 
@@ -31,6 +36,7 @@ Calculadora menu(){
 
       var calculadora =  Calculadora(op: op, valor1: valor1, valor2: valor2); // linha de instanciamento
       return calculadora;
+
       }catch(e){
         throw Exception('ERRO! $opEntrada e $entradaValor1 e $entradaValor2 não são valores numéricos');
         }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'interface_calculadora.dart';
 
 class Calculadora implements InterfaceCalculadora{
@@ -37,10 +39,15 @@ class Calculadora implements InterfaceCalculadora{
          multiplicacaoValor = multiplicacao(valor1: valor1, valor2: valor2);
          break; 
          case 4: 
+         divisaoValor  = divisao(valor1: valor1, valor2: valor2);
          break; 
          case 5: 
-         break; 
+         print('Encerrando o programa');
+         exit(0);
          default:
+         print('Valor fora da faixa !!!');
+         print('Encerrando o programa !!!');
+         exit(0);
       }
   }
   // ================== Interfaces
@@ -49,6 +56,7 @@ class Calculadora implements InterfaceCalculadora{
   double? somaValor;
   double? subtracaoValor;
   double? multiplicacaoValor;
+  double? divisaoValor;
 
   @override
   double soma({required double valor1,required double valor2}){
@@ -61,6 +69,10 @@ class Calculadora implements InterfaceCalculadora{
   @override
   double multiplicacao({required double valor1,required double valor2}){
       return valor1 * valor2;
+  }
+  @override
+  double divisao({required double valor1,required double valor2}){
+    return valor1 / valor2;
   }
   @override 
   String toString() => 'Opção $op, valor 1:$valor1, valor 2: $valor2';
