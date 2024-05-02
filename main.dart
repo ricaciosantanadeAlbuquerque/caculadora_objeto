@@ -6,6 +6,7 @@ void main(List<String> args){
  print((calculadora.somaValor  != null) ? calculadora.somaValor : '--------');
  print((calculadora.subtracaoValor != null) ? calculadora.subtracaoValor : '--------' );
  print((calculadora.multiplicacaoValor != null) ? calculadora.multiplicacaoValor : '------');
+ print((calculadora.divisaoValor != null) ? calculadora.divisaoValor : '--------');
  
 }
 
